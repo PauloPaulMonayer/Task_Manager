@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card-bg: #f5f5f5;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.high-priority {
+  color: #ff4d4f;
+}
+.medium-priority {
+  color: #faad14;
+}
+.low-priority {
+  color: #52c41a;
+}
+
+/* עיצוב כפתורים משופר */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-edit {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #2563eb;
+}
+
+.button-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #dc2626;
+}
+
+/* עיצוב לקלפי המשימות */
+.task-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* צבעי עדיפויות */
+.high-priority {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.medium-priority {
+  background-color: #fef9c3;
+  color: #b45309;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.low-priority {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.hover\:scale-105 {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.05);
+}

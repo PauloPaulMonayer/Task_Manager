@@ -1,0 +1,17 @@
+/* מניעת גלישה של טקסט במשימות */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* עיצוב אירועים */
+.rbc-event {
+  padding: 4px;
+  font-size: 14px;
+  line-height: 1.2;
+  max-height: 1.5em; /* גובה מקסימלי לטקסט */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
